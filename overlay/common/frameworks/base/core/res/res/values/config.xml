@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+        <!-- qcom provider -->
+        <item>com.qualcomm.location</item>
+        <!-- The Google provider -->
+        <item>com.google.android.gms</item>
+        <!-- The standard AOSP fused location provider -->
+        <item>com.android.location.fused</item>
+    </string-array>
+
+    <bool name="config_cellBroadcastAppLinks">true</bool>
+
+    <!-- Control whether Night display is available. This should only be enabled on devices
+         with HWC 2.0 or higher. -->
+    <bool name="config_nightDisplayAvailable">true</bool>
+
+    <!-- Override the default detection behavior for the framework method
+    android.view.ViewConfiguration#hasPermanentMenuKey().
+    Valid settings are:
+    0 - No change. Use the default autodetection behavior.
+    1 - The device DOES have a permanent menu key; ignore autodetection.
+    2 - The device DOES NOT have a permanent menu key; ignore autodetection. -->
+    <integer name="config_overrideHasPermanentMenuKey">2</integer>
+
+    <bool name="config_enableAutoPowerModes">true</bool>
+
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/arm64/boot-framework.oat"</item>
+        <item>"/system/framework/framework.jar"</item>
+        <item>"/system/framework/oat/arm64/services.odex"</item>
+        <item>"/system/framework/services.jar"</item>
+        <item>"/system/framework/arm64/boot.oat"</item>
+        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
+        <item>"/apex/com.android.runtime/javalib/core-oj.jar"</item>
+        <item>"/apex/com.android.runtime/javalib/core-libart.jar"</item>
+        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
+        <item>"/system/lib64/libsurfaceflinger.so"</item>
+    </string-array>
+
+    <!-- Controls the WiFi wakeup feature.
+    0 = Not available.
+    1 = Available.
+    -->
+    <integer translatable="false" name="config_wifi_wakeup_available">1</integer>
+
+    <!--  Define Google play service package for FRP-->
+    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
+
+    <bool name="config_dozeAlwaysOnDisplayEnabledDefault">false</bool>
+
+    <!-- System font packages (overlay in vendor) -->
+    <!--<string-array name="config_fontPackages" translatable="false">
+        <item>org.omnirom.fonts</item>
+    </string-array> -->
+
+    <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
+    <bool name="config_swipe_up_gesture_setting_available">true</bool>
+
+    <bool name="config_smart_battery_available">true</bool>
+
+    <!-- Round UI stuff -->
+    <!-- default window inset isRound property -->
+    <bool name="config_windowIsRound">true</bool>
+
+    <!-- The duration in which a recent task is considered in session and should be visible. -->
+    <integer name="config_activeTaskDurationHours">12</integer>
+
+        <!-- The package name for the default wellbeing app.
+         This package must be trusted, as it has the permissions to control other applications
+         on the device.
+         Example: "com.android.wellbeing"
+     -->
+    <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
+
+
+    <!-- The package name for the system's app prediction service.
+         This service must be trusted, as it can be activated without explicit consent of the user.
+         Example: "com.android.intelligence/.AppPredictionService"
+    -->
+    <string name="config_defaultAppPredictionService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService</string>
+
+    <!-- The package name for the system's augmented autofill service.
+         This service must be trusted, as it can be activated without explicit consent of the user.
+         If no service with the specified name exists on the device, augmented autofill wil be
+         disabled.
+         Example: "com.android.augmentedautofill/.AugmentedAutofillService"
+    -->
+    <string name="config_defaultAugmentedAutofillService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService</string>
+
+
+    <!-- The package name for the system's content suggestions service.
+         Provides suggestions for text and image selection regions in snapshots of apps and should
+         be able to classify the type of entities in those selections.
+
+         This service must be trusted, as it can be activated without explicit consent of the user.
+         If no service with the specified name exists on the device, content suggestions wil be
+         disabled.
+         Example: "com.android.contentsuggestions/.ContentSuggestionsService"
+    -->
+    <string name="config_defaultContentSuggestionsService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
+
+    <!-- The component name for the system-wide captions manager service.
+         This service must be trusted, as the system binds to it and keeps it running.
+         Example: "com.android.captions/.SystemCaptionsManagerService"
+    -->
+    <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
+
+    <!-- The component name for the system-wide captions service.
+         This service must be trusted, as it controls part of the UI of the volume bar.
+         Example: "com.android.captions/.SystemCaptionsService"
+    -->
+    <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
+
+    <!-- The package name for the default system textclassifier service.
+         This service must be trusted, as it can be activated without explicit consent of the user.
+         Example: "com.android.textclassifier"
+         If no textclassifier service with the specified name exists on the device (or if this is
+         set to empty string), a default textclassifier will be loaded in the calling app's process.
+         See android.view.textclassifier.TextClassificationManager.
+    -->
+    <string name="config_defaultTextClassifierPackage">com.google.android.as</string>
+
+    <!-- Indicates that connected MAC randomization is supported on this device -->
+    <bool translatable="false" name="config_wifi_connected_mac_randomization_supported">true</bool>
+</resources>
